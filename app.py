@@ -36,7 +36,7 @@ def get_request(lab_id):
     return json.dumps(data)
     
 @app.route("/db", methods=["GET"])
-def get_request():
+def db_request():
     """
     Handle GET request to - /<lab_id>/
     Return a list of DB

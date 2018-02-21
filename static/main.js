@@ -47,12 +47,12 @@ $(function() {
     var db = $ ("#db_select").val();
     var lab_id = $ ("#lab_select").val();
 
-    var get_request = $.ajax({
+    var db_request = $.ajax({
       type: 'GET',
       url: '/db?lab_id=' + lab_id + '&db=' + db
     });
 
-    get_request.done(function(data){
+    db_request.done(function(data){
 
       console.log('got document data')
       console.log(data)
