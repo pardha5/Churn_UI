@@ -48,7 +48,7 @@ def db_request():
     client = MongoClient('localhost',lab_id)
     print client
     
-    dbase = client['db']
+    dbase = client[db]
     print dbase
     collection = dbase.JSON
     cursor = collection.find({})
