@@ -47,15 +47,15 @@ def db_request():
     print 'in /lab/lab_id/db'
     client = MongoClient('localhost',lab_id)
     print client
-    #data = c.database_names()
-    #print data
+    
     dbase = client['db']
     print dbase
     collection = dbase.JSON
     cursor = collection.find({})
+    db_data
     for document in cursor:
-        data = document 
-    return json.dumps(data)
+        db_data = document 
+    return json.dumps(db_data)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
