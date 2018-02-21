@@ -46,7 +46,8 @@ $(function() {
 
     var db = $ ("#db_select").val();
     var lab_id = $ ("#lab_select").val();
-
+    console.log(db)
+    console.log(lab_id)
     var db_request = $.ajax({
       type: 'GET',
       url: '/lab/db?lab_id=' + lab_id + '&db=' + db
