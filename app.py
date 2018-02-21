@@ -42,7 +42,7 @@ def db_request():
     Return a list of DB
     
     """
-    global db_data
+    db_data
     lab_id = int(request.args.get('lab_id'))
     db = request.args.get('db')
     print 'in /lab/lab_id/db'
