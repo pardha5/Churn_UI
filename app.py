@@ -35,6 +35,25 @@ def get_request(lab_id):
     print data
     return json.dumps(data)
     
+@app.route("/lab/<int:lab_id>/<db>/", methods=["GET"])
+def get_request(lab_id,db):
+    """
+    Handle GET request to - /<lab_id>/
+    Return a list of DB
+    
+    """
+    print 'in /lab/lab_id/db'
+    c = MongoClient('localhost',lab_id)
+    print c
+    #data = c.database_names()
+    #print data
+    dbase = client['db']
+    print dbase
+    collection = dbase.JSON
+    cursor = collection.find({})
+    for document in cursor:
+        data = document 
+    return json.dumps(data)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    

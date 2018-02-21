@@ -42,6 +42,25 @@ $(function() {
     });
   });
 
+  $("#db_select").change(function(){
+
+    var db = $ ("#db_select").val();
+    var lab_id = $ ("#lab_select").val();
+
+    var get_request = $.ajax({
+      type: 'GET',
+      url: '/lab/' + lab_id + '/' + db + '/'
+    });
+
+    get_request.done(function(data){
+
+      console.log('got document data')
+      console.log(data)
+
+    });
+
+  });
+
   $("#submit-btn").click(function() {
 
     // grab values
