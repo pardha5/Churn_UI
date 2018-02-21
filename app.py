@@ -35,13 +35,15 @@ def get_request(lab_id):
     print data
     return json.dumps(data)
     
-@app.route("/lab/<int:lab_id>/<db>/", methods=["GET"])
-def get_request(lab_id,db):
+@app.route("/lab/db/", methods=["GET"])
+def get_request():
     """
     Handle GET request to - /<lab_id>/
     Return a list of DB
     
     """
+    lab_id = request.args.get('lab_id')
+    db = request.args.get('db')
     print 'in /lab/lab_id/db'
     c = MongoClient('localhost',lab_id)
     print c
