@@ -52,13 +52,13 @@ def db_request():
     print dbase
     collection = dbase.JSON
     cursor = collection.find({})
-    db_data = list(collection.find({}))
+    db_data = dict(collection.find({}))
     print 'Documents data #############################'
     print db_data
     #print cursor
     #for document in cursor:
     #    db_data.append(document) 
-    return db_data
+    return json.dumps(db_data)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
