@@ -42,7 +42,7 @@ def db_request():
     Return a list of DB
     
     """
-    lab_id = request.args.get('lab_id')
+    lab_id = int(request.args.get('lab_id'))
     db = request.args.get('db')
     print 'in /lab/lab_id/db'
     client = MongoClient('localhost',lab_id)
