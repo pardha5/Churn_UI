@@ -42,7 +42,6 @@ def db_request():
     Return a list of DB
     
     """
-    db_data = []
     lab_id = int(request.args.get('lab_id'))
     db = request.args.get('db')
     print 'in /lab/lab_id/db'
@@ -53,9 +52,10 @@ def db_request():
     print dbase
     collection = dbase.JSON
     cursor = collection.find({})
-    print cursor
-    for document in cursor:
-        db_data.append(document) 
+    db_data = list(collection.find({}))
+    #print cursor
+    #for document in cursor:
+    #    db_data.append(document) 
     return json.dumps(db_data)
 
 def parse_json(json_file):
