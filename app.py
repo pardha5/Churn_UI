@@ -52,7 +52,7 @@ def db_request():
     print dbase
     collection = dbase.JSON
     cursor = collection.find({})
-    db_data
+    print cursor
     for document in cursor:
         db_data = document 
     return json.dumps(db_data)
