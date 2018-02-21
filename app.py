@@ -59,7 +59,7 @@ def db_request():
     #print cursor
     #for document in cursor:
     #    db_data.append(document) 
-    return json.dumps(db_data)
+    return dumps(db_data)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
