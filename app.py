@@ -53,6 +53,8 @@ def db_request():
     collection = dbase.JSON
     cursor = collection.find({})
     db_data = list(collection.find({}))
+    print 'Documents data #############################'
+    print db_data
     #print cursor
     #for document in cursor:
     #    db_data.append(document) 
