@@ -35,7 +35,7 @@ def get_request(lab_id):
     print data
     return json.dumps(data)
     
-@app.route("/db", methods=["GET"])
+@app.route("/lab/db", methods=["GET"])
 def db_request():
     """
     Handle GET request to - /<lab_id>/
@@ -45,8 +45,8 @@ def db_request():
     lab_id = request.args.get('lab_id')
     db = request.args.get('db')
     print 'in /lab/lab_id/db'
-    c = MongoClient('localhost',lab_id)
-    print c
+    client = MongoClient('localhost',lab_id)
+    print client
     #data = c.database_names()
     #print data
     dbase = client['db']

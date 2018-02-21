@@ -49,7 +49,7 @@ $(function() {
 
     var db_request = $.ajax({
       type: 'GET',
-      url: '/db?lab_id=' + lab_id + '&db=' + db
+      url: '/lab/db?lab_id=' + lab_id + '&db=' + db
     });
 
     db_request.done(function(data){
