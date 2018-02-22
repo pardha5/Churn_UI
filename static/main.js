@@ -58,10 +58,10 @@ $(function() {
 
       console.log('got document data')
       console.log(data)
-      //var db_data = JSON.stringify(data);
-      //console.log(db_data)
+      var db_data = JSON.stringify(data, null, 2);
+      console.log(db_data)
       
-      $("#chosen_json").html(data);
+      $("#chosen_json").html(db_data);
 
     });
 
