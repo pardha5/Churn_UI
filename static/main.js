@@ -59,6 +59,7 @@ $(function() {
       console.log(data)
       var db_data = JSON.stringify(data);
       console.log(db_data)
+      $("#prettyprint").html(db_data);
 
     });
 
@@ -80,6 +81,7 @@ $(function() {
 
     // show values selected
     $("#show_selection").show();
+    $("#show_json").show();
     // enable refresh button
     $("#refresh-btn").prop("disabled", false)
     // disable submit button
@@ -98,9 +100,11 @@ $(function() {
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
     $("#chosen_db_id").html("");
+    $("#prettyprint").html("");
 
     // hide values selected
     $("#show_selection").hide();
+    $("#show_json").hine();
     // disable refresh button
     $("#refresh-btn").prop("disabled", true);
     // enable submit button
