@@ -13,10 +13,11 @@
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   
   <body>
-
+    <img src="{{ url_for('static', filename='cisco.jpg') }}" alt="Banner Image"/>
+    <br><br>
     <div class="container">
       <h1>Make Churn Selection</h1><br><br>
-      <img src="{{ url_for('static', filename='cisco.jpg') }}" alt="Banner Image"/>
+
       <div id="lab_selection">
         <form action="/" method="POST">
           {{ form.hidden_tag() }}
