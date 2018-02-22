@@ -67,7 +67,7 @@ def run_request():
     Handles GET request to churn run
 
     """
-    lab = int(request.args.get('lab'))
+    lab = request.args.get('lab')
     db = request.args.get('db')
     print 'in /lab/run'
     print lab
