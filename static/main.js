@@ -57,6 +57,8 @@ $(function() {
 
       console.log('got document data')
       console.log(data)
+      var db_data = JSON.stringify(data);
+      console.log(db_data)
 
     });
 
