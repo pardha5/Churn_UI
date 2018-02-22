@@ -54,7 +54,7 @@ def db_request():
     collection = dbase.JSON
     cursor = collection.find({})
     db_data = list(collection.find({}))
-    console.log(db_data[0])
+    print db_data[0]
     print 'Documents data #############################'
     print db_data
     #print cursor
