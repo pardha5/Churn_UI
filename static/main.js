@@ -73,13 +73,13 @@ $(function() {
     var lab = $("#lab_select").find(":selected").text();
     var db = $("#db_select").find(":selected").text();
     var lab_id = $("#lab_select").val();
-    var db_id = $("#db_select").val();
+    //var db_id = $("#db_select").val();
 
     // append values to the DOM
     $("#chosen_lab").html(lab);
     $("#chosen_db").html(db);
     $("#chosen_lab_id").html(lab_id);
-    $("#chosen_db_id").html(db_id);
+    //$("#chosen_db_id").html(db_id);
 
     // show values selected
     $("#show_selection").show();
@@ -101,7 +101,7 @@ $(function() {
     $("#chosen_lab").html("");
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
-    $("#chosen_db_id").html("");
+    //$("#chosen_db_id").html("");
     $("#chosen_json").html("");
 
     // hide values selected
