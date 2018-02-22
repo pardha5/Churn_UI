@@ -3,6 +3,7 @@ $(function() {
   // test to ensure jQuery is working
   console.log("whee!")
   $("#db_select").hide();
+  $("#show_json").hide();
 
   // disable refresh button
   $("#refresh-btn").prop("disabled", true)
@@ -59,7 +60,7 @@ $(function() {
       console.log(data)
       var db_data = JSON.stringify(data);
       console.log(db_data)
-      $("#show_json").hide();
+      
       $("#chosen_json").html(db_data);
 
     });
