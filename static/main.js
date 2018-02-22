@@ -59,7 +59,7 @@ $(function() {
       console.log(data)
       var db_data = JSON.stringify(data);
       console.log(db_data)
-      $("#prettyprint").html(db_data);
+      $("#chosen_json").html(db_data);
 
     });
 
@@ -100,7 +100,7 @@ $(function() {
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
     $("#chosen_db_id").html("");
-    $("#prettyprint").html("");
+    $("#chosen_json").html("");
 
     // hide values selected
     $("#show_selection").hide();
