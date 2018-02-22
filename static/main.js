@@ -121,4 +121,22 @@ $(function() {
    
   });
 
+  $("#run-btn").click(function() {
+
+    var db = $ ("#db_select").val();
+    var lab = $("#lab_select").find(":selected").text();
+    console.log(db)
+    console.log(lab)
+
+    var run_request = $.ajax({
+      type: 'GET',
+      url: '/lab/run?lab_id=' + lab + '&db=' + db
+    });
+
+    run_request.done(function(data){
+      console.log('Run Initiated')
+    }); 
+   
+  });
+
 });

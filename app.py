@@ -45,7 +45,7 @@ def db_request():
     """
     lab_id = int(request.args.get('lab_id'))
     db = request.args.get('db')
-    print 'in /lab/lab_id/db'
+    print 'in /lab/db'
     client = MongoClient('localhost',lab_id)
     print client
     
@@ -60,6 +60,19 @@ def db_request():
     #for document in cursor:
     #    db_data.append(document) 
     return dumps(db_data)
+
+@app.route("/lab/run", methods=["GET"])
+def run_request():
+    """
+    Handles GET request to churn run
+
+    """
+    lab = int(request.args.get('lab'))
+    db = request.args.get('db')
+    print 'in /lab/run'
+    print lab
+    print db
+    return render_template('run.html')
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
