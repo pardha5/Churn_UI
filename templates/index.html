@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Flask - AJAX Form</title>
+    <title>CHURN UI</title>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
   </head>
@@ -15,7 +15,7 @@
   <body>
 
     <div class="container">
-      <h1>Select a Lab</h1><br><br>
+      <h1>Make Churn Selection</h1><br><br>
 
       <div id="lab_selection">
         <form action="/" method="POST">
@@ -55,6 +55,7 @@
 
       <div id="show_json">
         <code id="chosen_json" class="prettyprint"></code>
+        <button type="button" class="btn btn-danger" id="run-btn">Run CHURN</button>
       </div>
 
     </div>
