@@ -60,7 +60,7 @@ def db_request():
     #print cursor
     #for document in cursor:
     #    db_data.append(document) 
-    return dumps(db_data)
+    return dumps(db_data[0])
 
 @app.route("/lab/run", methods=["GET"])
 def run_request():
