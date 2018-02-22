@@ -59,6 +59,7 @@ $(function() {
       console.log(data)
       var db_data = JSON.stringify(data);
       console.log(db_data)
+      $("#show_json").hide();
       $("#chosen_json").html(db_data);
 
     });
@@ -104,7 +105,7 @@ $(function() {
 
     // hide values selected
     $("#show_selection").hide();
-    $("#show_json").hine();
+    $("#show_json").hide();
     // disable refresh button
     $("#refresh-btn").prop("disabled", true);
     // enable submit button
