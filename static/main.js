@@ -130,7 +130,7 @@ $(function() {
 
     var run_request = $.ajax({
       type: 'GET',
-      url: '/lab/run?lab_id=' + lab + '&db=' + db
+      url: '/lab/run?lab=' + lab + '&db=' + db
     });
 
     run_request.done(function(data){
