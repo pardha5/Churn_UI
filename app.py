@@ -64,7 +64,7 @@ def db_request():
         #for document in cursor:
         #    db_data.append(document)
     else:
-        db_data[0] = "Collection Not Found" 
+        db_data.append("Collection JSON doesnot exist in this DataBase") 
     return dumps(db_data[0])
 
 @app.route("/lab/run", methods=["GET"])
