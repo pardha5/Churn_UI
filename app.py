@@ -77,7 +77,7 @@ def run_request():
     print 'in /lab/run'
     print lab
     print db
-    return redirect(url_for('run.html'))
+    return redirect('run.html')
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
