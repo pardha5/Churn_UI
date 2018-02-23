@@ -77,7 +77,7 @@ def run_request():
     print 'in /lab/run'
     print lab
     print db
-    return redirect('run')
+    return redirect(url_for('run'))
 
 @app.route("/run", methods=["GET", "POST"])
 def run():
