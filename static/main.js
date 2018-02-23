@@ -59,9 +59,10 @@ $(function() {
       console.log('got document data')
       console.log(data)
       db_data = JSON.stringify(data, undefined, 2),
+      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       document.getElementById("show_json").innerHTML = db_data;
-      //result = data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
-      //console.log(result)
+      
+      console.log(result)
       
       //$(".box").append(result);
 
