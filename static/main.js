@@ -101,7 +101,7 @@ $(function() {
   $("#refresh-btn").click(function() {
 
     // remove values to the DOM
-    $("#chosen_lab").html("");
+    $("#chosen_lab").html("Select a Lab");
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
     //$("#chosen_db_id").html("");
