@@ -101,8 +101,8 @@ $(function() {
   $("#refresh-btn").click(function() {
 
     // remove values to the DOM
-    $("#chosen_lab").val('0');
-    //$("#chosen_lab").html("");
+    window.location.href = '/lab';
+    $("#chosen_lab").html("");
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
     //$("#chosen_db_id").html("");
