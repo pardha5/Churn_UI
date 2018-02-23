@@ -58,11 +58,11 @@ $(function() {
 
       console.log('got document data')
       console.log(data)
-      var db_data = JSON.stringify(data, null, 2);
-      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;").replace('[', '').replace(']', '');
+      var db_data = JSON.stringify(data, undefined, 2);
+      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       console.log(result)
       
-      $("#chosen_json").html(result);
+      $("#chosen_json").append(result);
 
     });
 
