@@ -1,6 +1,6 @@
 import json
 from pymongo import MongoClient
-from flask import Flask, request, render_template, make_response
+from flask import Flask, request, render_template, make_response, redirect
 from form import TestForm
 from bson.json_util import dumps
 
@@ -77,7 +77,7 @@ def run_request():
     print 'in /lab/run'
     print lab
     print db
-    return redirect('run.html')
+    return redirect(url_for('run.html'))
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
