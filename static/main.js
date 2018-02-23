@@ -62,7 +62,7 @@ $(function() {
       //result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       document.getElementById("chosen_json").innerHTML = db_data;
       
-      console.log(result)
+      //console.log(result)
       
       //$(".box").append(result);
 
