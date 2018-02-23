@@ -51,16 +51,19 @@ def db_request():
     
     dbase = client[db]
     print dbase
-    collection = dbase.JSON
-    print collection
-    cursor = collection.find({})
-    db_data = list(collection.find({}))
-    print db_data[0]
-    print 'Documents data #############################'
-    print db_data
-    #print cursor
-    #for document in cursor:
-    #    db_data.append(document) 
+    if "JSON" in dbase.collection_names():
+        collection = dbase.JSON
+        print collection
+        cursor = collection.find({})
+        db_data = list(collection.find({}))
+        print db_data[0]
+        print 'Documents data #############################'
+        print db_data
+        #print cursor
+        #for document in cursor:
+        #    db_data.append(document)
+    else:
+        db_data[0] = "Collection Not Found" 
     return dumps(db_data[0])
 
 @app.route("/lab/run", methods=["GET"])
