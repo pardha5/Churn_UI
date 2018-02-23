@@ -62,7 +62,7 @@ $(function() {
       result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       console.log(result)
       
-      $("#chosen_json").append(result);
+      $(".box").append(result);
 
     });
 
@@ -103,7 +103,7 @@ $(function() {
     $("#chosen_db").html("");
     $("#chosen_lab_id").html("");
     //$("#chosen_db_id").html("");
-    $("#chosen_json").html("");
+    $(".box").html("");
 
     // hide values selected
     $("#show_selection").hide();
