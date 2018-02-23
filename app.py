@@ -65,7 +65,7 @@ def db_request():
         #    db_data.append(document)
     else:
         db_data.append("Collection JSON doesnot exist in this DataBase to show. If you want to go a head click Run CHURN") 
-    return db_data[0]
+    return db_data
 
 @app.route("/lab/run", methods=["GET"])
 def run_request():
