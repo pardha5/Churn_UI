@@ -57,13 +57,13 @@ $(function() {
     db_request.done(function(data){
 
       console.log('got document data')
-      console.log(data)
+      console.log(data[0])
       //db_data = JSON.stringify(data, undefined, 2),
       //db_data = JSON.stringify(data, null, '  '),
       //result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       //document.getElementById("chosen_json").innerHTML = data;
       $.each($('.displayWrapper').children(),function(idx, child){
-        $(child).html(JSON.stringify(data, null, 4));
+        $(child).html(JSON.stringify(data[0], null, 4));
       });
       //console.log(result)
       
