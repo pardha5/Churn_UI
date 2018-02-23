@@ -79,7 +79,7 @@ def run_request():
     print db
     return redirect('run')
 
-@app.route("/run")
+@app.route("/run", methods=["GET", "POST"])
 def run():
     render_template('run.html')
 
