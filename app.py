@@ -1,5 +1,5 @@
 import json
-from pymongo import MongoClient
+from pymongo import MongoClient, json_utils
 from flask import Flask, request, render_template, make_response, redirect, url_for
 from form import TestForm
 from bson.json_util import dumps
@@ -65,7 +65,7 @@ def db_request():
         #    db_data.append(document)
     else:
         db_data.append("Collection JSON doesnot exist in this DataBase to show. If you want to go a head click Run CHURN") 
-    return json.dumps(db_data[0])
+    return json.dumps(db_data, default=json_util.default)
 
 @app.route("/lab/run", methods=["GET"])
 def run_request():
