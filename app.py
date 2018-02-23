@@ -43,7 +43,7 @@ def db_request():
     Return a list of DB
     
     """
-    db_data = ''
+    db_data = list();
     lab_id = int(request.args.get('lab_id'))
     db = request.args.get('db')
     print 'in /lab/db'
