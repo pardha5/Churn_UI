@@ -52,6 +52,7 @@ def db_request():
     dbase = client[db]
     print dbase
     collection = dbase.JSON
+    print collection
     cursor = collection.find({})
     db_data = list(collection.find({}))
     print db_data[0]
