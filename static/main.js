@@ -139,7 +139,9 @@ $(function() {
 
     run_request.done(function(data){
       console.log('Run Initiated')
-    }); 
+    });
+
+    $("#run-btn").prop("disabled", true);
    
   });
 
