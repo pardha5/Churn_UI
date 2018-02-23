@@ -59,7 +59,7 @@ $(function() {
       console.log('got document data')
       console.log(data)
       var db_data = JSON.stringify(data, null, 2);
-      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
+      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;").replace('[', '').replace(']', '');
       console.log(result)
       
       $("#chosen_json").html(result);
