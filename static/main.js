@@ -60,14 +60,14 @@ $(function() {
       console.log(data)
       db_data = JSON.stringify(data, undefined, 2),
       //db_data = JSON.stringify(data, null, '  '),
-      result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
+      //result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
       //document.getElementById("chosen_json").innerHTML = db_data;
       /*$.each($('.displayWrapper').children(),function(idx, child){
         $(child).html(JSON.stringify(data, null, 4));
       });*/
       //console.log(result)
       
-      $(".box").append(result);
+      $(".box").append(db_data);
 
     });
 
