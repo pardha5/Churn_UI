@@ -77,7 +77,11 @@ def run_request():
     print 'in /lab/run'
     print lab
     print db
-    return redirect('run.html')
+    return redirect('run')
+
+@app.route("/run")
+    def run():
+        render_template('run.html')
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
