@@ -60,7 +60,7 @@ $(function() {
       console.log(data)
       db_data = JSON.stringify(data, undefined, 2),
       result = db_data.replace(/\n/g, "<br>").replace(/[ ]/g, "&nbsp;");
-      document.getElementById("show_json").innerHTML = db_data;
+      document.getElementById("chosen_json").innerHTML = result;
       
       console.log(result)
       
