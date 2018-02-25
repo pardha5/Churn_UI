@@ -1,8 +1,12 @@
 import json
+import logging
+from pexpect import pxssh
 from pymongo import MongoClient
 from flask import Flask, request, render_template, make_response, redirect, url_for
 from form import TestForm
 from bson.json_util import dumps
+
+logger = logging.getLogger ('logging')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "my precious"
@@ -78,6 +82,9 @@ def run_request():
     print 'in /lab/run'
     print lab
     print db
+    #Handle Run Commands here.
+    churn_ssh(lab,db)
+
     return redirect(url_for('run'))
 
 @app.route("/run", methods=["GET", "POST"])
@@ -89,6 +96,29 @@ def parse_json(json_file):
         data = json.load(data_file)
     print data
     return data
+
+def churn_ssh(lab, db):
+    
+    s = pxssh.pxssh()
+    if not s.login (lab , 'ec2-user', ''):
+        #print "SSH session failed on login."
+        logger.info("SSH session failed on login.")
+        print str(s)
+    else:
+        #print "SSH session login successful"
+        logger.info('SSH session login successful')
+        s.sendline ('ls -l')
+        s.prompt()         # match the prompt
+        print s.before     # print everything before the prompt.
+        s.sendline ('cd churn/src/')
+        #s.sendline ('ls -l')
+        #s.prompt()
+        #print s.before
+        #s.sendline ('./i_churn.py --lab scaledc101')
+        s.prompt()
+        print s.before
+        s.logout()
+
 
 
 if __name__ == "__main__":
