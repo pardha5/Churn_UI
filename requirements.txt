@@ -6,5 +6,5 @@ WTForms==2.0
 Werkzeug==0.9.4
 itsdangerous==0.24
 wsgiref==0.1.2
-pexcept
-pymongo
+pexcept==4.4.0
+pymongo==3.6.0
