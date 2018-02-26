@@ -146,7 +146,7 @@ $(function() {
 
     $("#run-btn").prop("disabled", true);
 
-    window.location.href = '/run';
+    window.location.href = '/run?db=' + db;
    
   });
 
