@@ -87,7 +87,7 @@ def run_request():
     print 'lab name in run_req method'
     print lab
     #Handle Run Commands here.
-    churn_ssh(host,db)
+    churn_ssh(host, db, lab)
 
     return redirect(url_for('run'))
 
@@ -113,10 +113,10 @@ def hosttolab(host):
     print labname 
     return labname
 
-def churn_ssh(lab, db):
+def churn_ssh(host, db, lab):
     
     s = pxssh.pxssh()
-    if not s.login (lab , 'ec2-user', ''):
+    if not s.login (host , 'ec2-user', ''):
         #print "SSH session failed on login."
         logger.info("SSH session failed on login.")
         print str(s)
@@ -130,7 +130,7 @@ def churn_ssh(lab, db):
         #s.sendline ('ls -l')
         #s.prompt()
         #print s.before
-        #s.sendline ('./i_churn.py --lab scaledc101')
+        s.sendline ("'./i_churn.py --lab' +lab+ '--db-name'+db")
         s.prompt()
         print s.before
         s.logout()
