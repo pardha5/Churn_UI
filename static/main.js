@@ -130,6 +130,7 @@ $(function() {
 
   $("#run-btn").click(function() {
 
+    $("#run-btn").prop("disabled", true);
     var db = $ ("#db_select").val();
     var lab = $("#lab_select").find(":selected").text();
     console.log(db)
@@ -142,11 +143,12 @@ $(function() {
 
     run_request.done(function(data){
       console.log('Run Initiated')
+      window.location.href = '/run?db=' + db;
     });
 
-    $("#run-btn").prop("disabled", true);
+    
 
-    window.location.href = '/run?db=' + db;
+    
    
   });
 

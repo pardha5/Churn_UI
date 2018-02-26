@@ -18,7 +18,7 @@ def index():
     Render form and handle form submission
     """
     form = TestForm(request.form)
-    form.lab.choices = [('0', 'Select a Lab')] + [
+    form.lab.choices = [('0', 'Select a Host/Lab')] + [
         (x['lab_id'], x['name']) for x in parse_json("labs.json")["labs"]]
     chosen_lab = None
     chosen_db = None
