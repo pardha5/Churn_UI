@@ -91,7 +91,7 @@ def run_request():
 
     return redirect(url_for('run', db_name=db))
 
-@app.route("/run/<db_name>", methods=["GET", "POST"])
+@app.route("/run", methods=["GET", "POST"])
 def run(db_name):
     return render_template('run.html', db_name=db_name)
 
