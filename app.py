@@ -133,7 +133,7 @@ def churn_ssh(host, db, lab):
         s.sendline('pwd')
         s.prompt()
         print s.before
-        s.sendline ('./i_churn.py --lab ' +lab+ '--db-name '+db)
+        s.sendline ('./i_churn.py --lab ' +lab+ ' --db-name '+db)
         s.prompt()
         print s.before
         s.logout()
