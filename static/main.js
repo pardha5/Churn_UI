@@ -143,7 +143,7 @@ $(function() {
 
     run_request.done(function(data){
       console.log('Run Initiated')
-      window.location.href = '/run?db=' + db;
+      //window.location.href = '/run?db=' + db;
     });
 
     
