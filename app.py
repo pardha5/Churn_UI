@@ -87,7 +87,7 @@ def run_request():
     print 'lab name in run_req method'
     print lab
     #Handle Run Commands here.
-    churn_ssh(lab,db)
+    churn_ssh(host,db)
 
     return redirect(url_for('run'))
 
