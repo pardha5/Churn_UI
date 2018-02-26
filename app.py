@@ -104,7 +104,7 @@ def hosttolab(host):
     labname = ''
     data = parse_json("labs.json")["labs"]
     print data
-    for x in data
+    for x in data:
         if x['name'] == host:
             labname = x['lab']
     #if labname
