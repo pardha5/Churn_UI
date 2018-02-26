@@ -84,6 +84,7 @@ def run_request():
     print db
     #get labname for the host selected from drop down
     lab = hosttolab(host)
+    print 'lab name in run_req method'
     print lab
     #Handle Run Commands here.
     #churn_ssh(lab,db)
@@ -108,6 +109,7 @@ def hosttolab(host):
         if x['name'] == host:
             labname = x['lab']
     #if labname
+    print 'lab name in host to lab method'
     print labname 
     return labname
 
