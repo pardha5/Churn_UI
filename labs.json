@@ -1,7 +1,8 @@
 {"labs": [
-    {"lab_id":27317, "name":"scaledc101"}, 
-    {"lab_id":27117, "name":"dcpt01"}, 
-    {"lab_id":27417, "name":"dc100"}
+    {"lab_id":27317, "name":"scaledc101-churn3", "lab":"scaledc101"},
+    {"lab_id":27217, "name":"scaledc101-churn2", "lab":"scaledc101"}, 
+    {"lab_id":27117, "name":"dcpt01-churn", "lab":"dcpt01"}, 
+    {"lab_id":27417, "name":"dc100-churn", "lab":"dc100"}
     ]
 }
 
