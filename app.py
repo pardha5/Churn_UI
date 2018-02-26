@@ -77,13 +77,16 @@ def run_request():
     Handles GET request to churn run
 
     """
-    lab = request.args.get('lab')
+    host = request.args.get('lab')
     db = request.args.get('db')
     print 'in /lab/run'
-    print lab
+    print host
     print db
+    #get labname for the host selected from drop down
+    lab = hosttolab(host)
+    print lab
     #Handle Run Commands here.
-    churn_ssh(lab,db)
+    #churn_ssh(lab,db)
 
     return redirect(url_for('run'))
 
@@ -96,6 +99,15 @@ def parse_json(json_file):
         data = json.load(data_file)
     print data
     return data
+
+def hosttolab(host):
+    labname = ''
+    for x in parse_json("labs.json")["labs"]
+        if x['name'] == host:
+            labname = x['lab']
+    #if labname
+    print labname 
+    return labname
 
 def churn_ssh(lab, db):
     
