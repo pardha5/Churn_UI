@@ -145,6 +145,8 @@ $(function() {
     });
 
     $("#run-btn").prop("disabled", true);
+
+    window.location.href = '/run';
    
   });
 
