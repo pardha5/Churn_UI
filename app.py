@@ -103,6 +103,7 @@ def parse_json(json_file):
 def hosttolab(host):
     labname = ''
     data = parse_json("labs.json")["labs"]
+    print data
     for x in data
         if x['name'] == host:
             labname = x['lab']
