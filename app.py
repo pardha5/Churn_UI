@@ -89,7 +89,7 @@ def run_request():
     #Handle Run Commands here.
     churn_ssh(host, db, lab)
 
-    return redirect(url_for('run'))
+    return redirect(url_for('run.html'))
 
 @app.route("/run", methods=["GET", "POST"])
 def run():
