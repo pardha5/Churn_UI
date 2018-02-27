@@ -16,6 +16,7 @@ p {
     width: 800px;
     /*height: 400px;*/
     padding: 10px;
+    position: relative;
 }
 .container_modify .json {
     margin: 0 auto;
@@ -37,8 +38,8 @@ p {
 
 #btm {
 
-  position: relative;
-  bottom: 1;
+  position: absolute;
+  bottom: 0;
 }
 
 /*#modify {
