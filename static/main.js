@@ -132,13 +132,22 @@ $(function() {
 
   $("#run-btn").click(function() {
 
-    $("#run-btn").prop("disabled", true);
+    //$("#run-btn").prop("disabled", true);
     var db = $ ("#db_select").val();
     var lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     console.log(ovr)
-    ovr_json = JSON.parse(ovr);
-    console.log(ovr_json);
+    
+    if(JSON.parse(ovr)){
+      ovr_json = JSON.parse(ovr);
+      console.log(ovr_json);
+      $("#run-btn").prop("disabled", true); 
+    }
+    else{
+      alert("Not a Valid JSPN, Check Json format in override text area!!!");
+      $("#run-btn").prop("disabled", false);
+    }
+    
     console.log(db)
     console.log(lab)
 
