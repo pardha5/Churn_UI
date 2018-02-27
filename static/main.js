@@ -139,7 +139,7 @@ $(function() {
     var run_request = $.ajax({
       type: 'GET',
       url: '/lab/run?lab=' + lab + '&db=' + db
-      success: function(response){
+      success: function(data) {
                 window.location.href = '/run?db=' + db;
             },
       error: function(error){
