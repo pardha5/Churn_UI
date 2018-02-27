@@ -140,7 +140,7 @@ $(function() {
       type: 'GET',
       url: '/lab/run?lab=' + lab + '&db=' + db,
       success: function(data) {
-                window.location.href = '/run?db=' + db;
+                window.location.href = '/run?lab=' + lab + '&db=' + db;
             },
       error: function(error){
                 console.log(error);
