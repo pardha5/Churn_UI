@@ -14,21 +14,21 @@ p {
 .container_modify {
     margin: 0 auto;
     width: 800px;
-    height: 400px;
+    /*height: 400px;*/
     padding: 10px;
 }
 .container_modify .json {
     margin: 0 auto;
     float: left;
     width: 400px;
-    height: 390px;
+    /*height: 390px;*/
 }
 .container_modify .modify {
     
     margin: 0 auto;
     float: right;
     width: 300px;
-    height: 390px;
+    /*height: 390px;*/
 }
 .container_modify .form-control {
   vertical-align: middle;
