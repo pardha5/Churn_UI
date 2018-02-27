@@ -33,3 +33,7 @@ p {
 .container_modify .form-control {
   vertical-align: middle;
 }
+
+#modify {
+	display: none;
+}
