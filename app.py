@@ -92,7 +92,7 @@ def run_request():
     #return redirect(url_for('run'))
     return redirect('/lab/run/result')
 
-@app.route("/lab/run/result", methods=["POST"])
+@app.route("/lab/run/result", methods=["POST", "GET"])
 def run():
     #db_name= request.args.get('db')
     return render_template('run.html')
