@@ -28,7 +28,7 @@ p {
     margin: 0 auto;
     float: right;
     width: 300px;
-    visibility: hidden;
+    display: none;
     /*height: 390px;*/
 }
 .container_modify .form-control {
