@@ -2,11 +2,7 @@
   padding-top: 50px;
   max-width: 500px;
 }
-.container_run{
 
-	padding-top: 50px;
-	max-width: 550px;
-}
  #db_select, #show_selection {
   display: none;
 }
