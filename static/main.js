@@ -137,6 +137,7 @@ $(function() {
     var lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     console.log(ovr)
+    console.log(JSON.parse(ovr))
     console.log(db)
     console.log(lab)
 
