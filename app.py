@@ -94,7 +94,7 @@ def run_request():
 @app.route("/run", methods=["POST", "GET"])
 def run():
     db_name= request.args.get('db')
-    return render_template('run.html')
+    return render_template('run.html', db_name=db_name)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
