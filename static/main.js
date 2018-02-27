@@ -161,7 +161,8 @@ $(function() {
 
    $("#mdfy-btn").click(function() {
 
-    $("#modify").show();
+    console.log('in mdfy button click')
+    $("#mdfy").show();
 
    
   });
