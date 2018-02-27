@@ -67,7 +67,7 @@ $(function() {
       /*$.each($('.displayWrapper').children(),function(idx, child){
         $(child).html(JSON.stringify(data, null, 4));
       });*/
-      //console.log(result)
+      console.log(db_data);
       
       $(".box").append(db_data);
 
