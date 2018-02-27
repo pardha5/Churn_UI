@@ -35,6 +35,12 @@ p {
   vertical-align: middle;
 }
 
+#btm {
+
+  position: absolute;
+  bottom: 0;
+}
+
 /*#modify {
 	display: none;
   visibility: hidden;
