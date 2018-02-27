@@ -141,7 +141,10 @@ $(function() {
       url: '/lab/run?lab=' + lab + '&db=' + db
       success: function(response){
                 window.location.href = '/run?db=' + db;
-            }
+            },
+      error: function(error){
+                console.log(error);
+           }
     });
 
     run_request.done(function(data){
