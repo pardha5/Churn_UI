@@ -149,12 +149,12 @@ $(function() {
       error: function(error){
                 console.log(error);
            }
-    });*/
+    });
 
     run_request.done(function(data){
       console.log('Run Initiated')
       //window.location.href = '/run?db=' + db;
-    }); 
+    }); */
    
   });
 
