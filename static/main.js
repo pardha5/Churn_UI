@@ -4,7 +4,6 @@ $(function() {
   console.log("whee!")
   $("#db_select").hide();
   $("#show_json").hide();
-  //$("#modify").hide();
 
   // disable refresh button
   $("#refresh-btn").prop("disabled", true)
@@ -92,7 +91,6 @@ $(function() {
 
     // show values selected
     $("#show_selection").show();
-    //$("#modify").hide();
     $("#show_json").show();
     // enable refresh button
     $("#refresh-btn").prop("disabled", false)
