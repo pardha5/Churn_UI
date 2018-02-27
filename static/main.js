@@ -138,7 +138,7 @@ $(function() {
     var ovr = $("#override").val();
     console.log(ovr)
     
-    if(JSON.parse(ovr)){
+    if(isJSON(ovr)){
       ovr_json = JSON.parse(ovr);
       console.log(ovr_json);
       $("#run-btn").prop("disabled", true); 
