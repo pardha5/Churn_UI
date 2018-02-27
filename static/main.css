@@ -28,13 +28,14 @@ p {
     margin: 0 auto;
     float: right;
     width: 300px;
+    visibility: hidden;
     /*height: 390px;*/
 }
 .container_modify .form-control {
   vertical-align: middle;
 }
 
-#modify {
-	/*display: none;*/
+/*#modify {
+	display: none;
   visibility: hidden;
-}
+}*/
