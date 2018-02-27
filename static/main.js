@@ -138,7 +138,7 @@ $(function() {
 
     var run_request = $.ajax({
       type: 'GET',
-      url: '/lab/run?lab=' + lab + '&db=' + db
+      url: '/lab/run?lab=' + lab + '&db=' + db,
       success: function(data) {
                 window.location.href = '/run?db=' + db;
             },
