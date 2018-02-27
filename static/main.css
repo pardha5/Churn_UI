@@ -36,7 +36,7 @@ p {
   vertical-align: middle;
 }
 
-#btm {
+.container_modify .btm {
 
   position: absolute;
   bottom: 0;
