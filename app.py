@@ -90,6 +90,8 @@ def run_request():
     print ovr
     #get labname for the host selected from drop down
     data['lab'] = hosttolab(host)
+    print 'data JSON ########################'
+    print data
     print 'lab name in run_req method'
     print data['lab']
     #Handle Run Commands here.

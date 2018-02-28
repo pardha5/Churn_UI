@@ -178,7 +178,7 @@ $(function() {
     }
     
     console.log(db)
-    console.log(lab)
+    console.log(host_lab)
 
     /*var run_request = $.ajax({
       type: 'GET',
