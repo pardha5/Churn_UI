@@ -102,8 +102,7 @@ def run_request():
 def run():
     #db_name= request.args.get('db')
     #lab_name= request.args.get('lab')
-    #d = request.args.get('data')
-    data = request.json
+    data = request.args.get('data')
     #data = json.loads(d)
     print 'data########################'
     print data
