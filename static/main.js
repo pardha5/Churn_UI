@@ -161,6 +161,8 @@ $(function() {
       success: function(data) {
                 console.log('Round call Success')
                 console.log(data)
+                data = JSON.parse(data);
+                console.log(data['lab'])
                 //window.location.href = '/run';
             },
       error: function(error){
