@@ -204,7 +204,7 @@ $(function() {
 
   $("#mdfy-btn").click(function() {
     console.log('in mdfy button click')
-    $(".container_modify").width("700px")
+    $(".container_modify").width("750px")
     $('#left').animate({
       'marginLeft' : "-=10px"
     });
