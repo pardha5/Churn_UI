@@ -102,6 +102,7 @@ def run_request():
 def run():
     #db_name= request.args.get('db')
     #lab_name= request.args.get('lab')
+    data = json.loads(request.data)
     return render_template('run.html', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr'])
 
 def parse_json(json_file):

@@ -160,6 +160,7 @@ $(function() {
       data: JSON.stringify(data),
       success: function(data) {
                 console.log('Round call Success')
+                console.log(data)
                 window.location.href = '/run';
             },
       error: function(error){
