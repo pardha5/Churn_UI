@@ -71,25 +71,30 @@ def db_request():
         db_data.append("Collection JSON doesnot exist in this DataBase to show. If you want to go a head click Run CHURN") 
     return dumps(db_data[0])
 
-@app.route("/lab/run", methods=["GET"])
+@app.route("/lab/run", methods=["POST"])
 def run_request():
     """
     Handles GET request to churn run
 
     """
-    host = request.args.get('lab')
-    db = request.args.get('db')
+    data = request.get_json()
+    host = data['lab']
+    db = data['db']
+    ovr = data['ovr']
+    #host = request.args.get('lab')
+    #db = request.args.get('db')
     print 'in /lab/run'
     print host
     print db
+    print ovr
     #get labname for the host selected from drop down
-    lab = hosttolab(host)
-    print 'lab name in run_req method'
-    print lab
+    #lab = hosttolab(host)
+    #print 'lab name in run_req method'
+    #print lab
     #Handle Run Commands here.
-    churn_ssh(host, db, lab)
-
-    return redirect(url_for('run'))
+    #churn_ssh(host, db, lab)
+    return ''
+    #return redirect(url_for('run'))
 
 @app.route("/run", methods=["POST", "GET"])
 def run():

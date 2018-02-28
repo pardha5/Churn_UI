@@ -153,12 +153,13 @@ $(function() {
       data['ovr'] = ovr_t;
       console.log('data request obj for ajax call')
       console.log(data)
-      /*var run_request = $.ajax({
-      type: 'GET',
-      url: '/lab/run?lab=' + lab + '&db=' + db,
+      var run_request = $.ajax({
+      type: 'POST',
+      url: '/lab/run',
       data: data,
       success: function(data) {
-                window.location.href = '/run?lab=' + lab + '&db=' + db;
+                console.log('Round call Success')
+                //window.location.href = '/run?lab=' + lab + '&db=' + db;
             },
       error: function(error){
                 console.log(error);
@@ -168,7 +169,7 @@ $(function() {
       run_request.done(function(data){
       console.log('Run Initiated')
       //window.location.href = '/run?db=' + db;
-      });*/
+      });
     }
     else{
       alert("Not a Valid JSPN, Check Json format in override text area!!!");
