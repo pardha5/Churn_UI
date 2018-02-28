@@ -79,15 +79,15 @@ def run_request():
     """
     data = request.json
     print data
-    #host = request.json['lab']
-    #db = request.json['db']
-    #ovr = request.json['ovr']
+    host = data['lab']
+    db = data['db']
+    ovr = data['ovr']
     #host = request.args.get('lab')
     #db = request.args.get('db')
-    ##print 'in /lab/run'
-    ##print host
-    ##print db
-    ##print ovr
+    print 'in /lab/run'
+    print host
+    print db
+    print ovr
     #get labname for the host selected from drop down
     #lab = hosttolab(host)
     #print 'lab name in run_req method'
