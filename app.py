@@ -77,10 +77,11 @@ def run_request():
     Handles GET request to churn run
 
     """
-    #data = request.get_json()
-    host = request.json['lab']
-    db = request.json['db']
-    ovr = request.json['ovr']
+    data = request.get_json()
+    print data
+    #host = request.json['lab']
+    #db = request.json['db']
+    #ovr = request.json['ovr']
     #host = request.args.get('lab')
     #db = request.args.get('db')
     print 'in /lab/run'
