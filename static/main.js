@@ -140,7 +140,7 @@ $(function() {
     
     if(isJSON(ovr)){
       console.log(ovr)
-      ovr_t = ovr.replace(/[\n\r]+/g, '').trim();
+      ovr_t = ovr.replace(/[\n\r\s{2,10}]+/g, '').trim();
       console.log(ovr_t)
       //ovr_json = JSON.parse(ovr);
       //console.log(ovr_json);
