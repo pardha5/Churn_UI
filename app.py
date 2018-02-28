@@ -95,9 +95,9 @@ def run_request():
     #Handle Run Commands here.
     print 'churn command print'
     if data['ovr'] == "{}":
-        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override '+data['ovr']
-    else:
         print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+    else:
+        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override '+data['ovr']
     #churn_ssh(host, db, lab)
     return ''
     #return redirect(url_for('run'))
