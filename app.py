@@ -96,7 +96,7 @@ def run_request():
     print data['lab']
     #Handle Run Commands here.
     churn_ssh(data)
-    return redirect(url_for('run', data=data))
+    return redirect(url_for('run', data=json.dumps(data)))
 
 @app.route("/run", methods=["POST", "GET"])
 def run():
