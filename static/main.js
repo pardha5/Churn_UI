@@ -140,15 +140,16 @@ $(function() {
     
     if(isJSON(ovr)){
       console.log(ovr)
+      ovr_t = ovr.trim();
       //ovr_json = JSON.parse(ovr);
       //console.log(ovr_json);
       $("#run-btn").prop("disabled", true);
       //Ajax Call with the data obtained
       //convert data to JSON
       var data = {}
-      data[lab] = lab;
-      data[db] = db;
-      data[ovr] = ovr;
+      data['lab'] = lab;
+      data['db'] = db;
+      data['ovr'] = ovr;
       console.log('data request obj for ajax call')
       console.log(data)
       /*var run_request = $.ajax({
