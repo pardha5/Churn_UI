@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>CHURN UI</title>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+    <!--<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">-->
   </head>
   
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <!--<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
   <!--<script src="{{ url_for('static', filename='main.js') }}"></script>-->
   <!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>-->
   <script>
@@ -24,8 +24,8 @@
     <img src="{{ url_for('static', filename='cisco.jpg') }}" alt="Banner Image"/>
     </div>
     <br><br>
-    <div class="container">
-      <h5>{{ db_name }} Run Initiated on {{ lab_name }} with override parameters {{ ovr_params }}</h5><br><br>
+    <div align="center">
+      <h4>{{ db_name }} Run Initiated on {{ lab_name }} with override parameters {{ ovr_params }}</h4><br><br>
       <div align="center">
         <button type="button" class="btn btn-primary" id="return-btn">Return</button>
       </div>
