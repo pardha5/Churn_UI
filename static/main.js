@@ -140,9 +140,33 @@ $(function() {
     
     if(isJSON(ovr)){
       console.log(ovr)
-      ovr_json = JSON.parse(ovr);
+      //ovr_json = JSON.parse(ovr);
       console.log(ovr_json);
-      $("#run-btn").prop("disabled", true); 
+      $("#run-btn").prop("disabled", true);
+      //Ajax Call with the data obtained
+      //convert data to JSON
+      var data = {}
+      data[lab] = lab;
+      data[db] = db;
+      data[ovr] = ovr;
+      console.log('data request obj for ajax call')
+      console.log(data)
+      /*var run_request = $.ajax({
+      type: 'GET',
+      url: '/lab/run?lab=' + lab + '&db=' + db,
+      data: data,
+      success: function(data) {
+                window.location.href = '/run?lab=' + lab + '&db=' + db;
+            },
+      error: function(error){
+                console.log(error);
+           }
+      });
+
+      run_request.done(function(data){
+      console.log('Run Initiated')
+      //window.location.href = '/run?db=' + db;
+      });*/
     }
     else{
       alert("Not a Valid JSPN, Check Json format in override text area!!!");
