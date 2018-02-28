@@ -163,7 +163,7 @@ $(function() {
                 console.log(data)
                 data = JSON.parse(data);
                 console.log(data['lab'])
-                //window.location.href = '/run';
+                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr'];
             },
       error: function(error){
                 console.log(error);

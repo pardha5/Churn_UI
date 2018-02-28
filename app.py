@@ -100,10 +100,10 @@ def run_request():
     return json.dumps(data)
 @app.route("/run", methods=["POST", "GET"])
 def run():
-    db_name= request.args.get('db_name')
-    lab_name= request.args.get('lab_name')
-    ovr_params= request.args.get('ovr_params')
-    return render_template('run.html', db_name=db_name, lab_name=lab_name, ovr_params=ovr_params)
+    db = request.args.get('db_name')
+    lab = request.args.get('lab_name')
+    ovr = request.args.get('ovr_params')
+    return render_template('run.html', db_name=db, lab_name=lab, ovr_params=ovr)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
