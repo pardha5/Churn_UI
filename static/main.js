@@ -139,6 +139,7 @@ $(function() {
     console.log(ovr)
     
     if(isJSON(ovr)){
+      console.log(ovr)
       ovr_json = JSON.parse(ovr);
       console.log(ovr_json);
       $("#run-btn").prop("disabled", true); 
