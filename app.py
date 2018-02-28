@@ -79,7 +79,7 @@ def run_request():
     """
     data = request.json
     print data
-    host = data['lab']
+    host = data['hlab']
     db = data['db']
     ovr = data['ovr']
     #host = request.args.get('lab')
@@ -98,7 +98,7 @@ def run_request():
         print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
     else:
         print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
-    #churn_ssh(host, db, lab)
+    #churn_ssh(data)
     return ''
     #return redirect(url_for('run'))
 
@@ -126,10 +126,10 @@ def hosttolab(host):
     print labname 
     return labname
 
-def churn_ssh(host, db, lab):
+def churn_ssh(data):
     
     s = pxssh.pxssh()
-    if not s.login (host , 'ec2-user', ''):
+    if not s.login (data['host'] , 'ec2-user', ''):
         #print "SSH session failed on login."
         logger.info("SSH session failed on login.")
         print str(s)

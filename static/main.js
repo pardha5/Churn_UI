@@ -134,7 +134,7 @@ $(function() {
 
     //$("#run-btn").prop("disabled", true);
     var db = $ ("#db_select").val();
-    var lab = $("#lab_select").find(":selected").text();
+    var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     console.log(ovr)
     
@@ -148,7 +148,7 @@ $(function() {
       //Ajax Call with the data obtained
       //convert data to JSON
       var data = {}
-      data['lab'] = lab;
+      data['hlab'] = host_lab;
       data['db'] = db;
       data['ovr'] = ovr_t;
       console.log('data request obj for ajax call')
