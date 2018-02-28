@@ -157,7 +157,7 @@ $(function() {
       type: 'POST',
       url: '/lab/run',
       contentType: 'application/json;charset=UTF-8',
-      data: data,
+      data: JSON.stringify(data),
       success: function(data) {
                 console.log('Round call Success')
                 //window.location.href = '/run?lab=' + lab + '&db=' + db;
