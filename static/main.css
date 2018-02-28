@@ -22,7 +22,7 @@ p {
     margin: auto;
     float: left;
     width: 400px;
-    position: relative;
+    /*position: relative;*/
     /*height: 390px;*/
 }
 .container_modify .modify {
