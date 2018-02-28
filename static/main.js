@@ -161,7 +161,7 @@ $(function() {
       success: function(data) {
                 console.log('Round call Success')
                 console.log(data)
-                window.location.href = '/run';
+                //window.location.href = '/run';
             },
       error: function(error){
                 console.log(error);
