@@ -12,7 +12,7 @@ p {
     font-family: Arial, sans-serrif;
 }
 .container_modify {
-    margin: 0 auto;
+    margin: auto;
     width: 800px;
     /*height: 400px;*/
     padding: 10px;
