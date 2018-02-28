@@ -95,12 +95,7 @@ def run_request():
     print 'lab name in run_req method'
     print data['lab']
     #Handle Run Commands here.
-    print 'churn command print'
-    if data['ovr'] == "{}":
-        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
-    else:
-        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
-    #churn_ssh(data)
+    churn_ssh(data)
     return ''
     #return redirect(url_for('run'))
 
@@ -131,7 +126,7 @@ def hosttolab(host):
 def churn_ssh(data):
     
     s = pxssh.pxssh()
-    if not s.login (data['host'] , 'ec2-user', ''):
+    if not s.login (data['hlab'] , 'ec2-user', ''):
         #print "SSH session failed on login."
         logger.info("SSH session failed on login.")
         print str(s)
@@ -148,6 +143,11 @@ def churn_ssh(data):
         s.sendline('pwd')
         s.prompt()
         print s.before
+        print 'churn command print'
+        if data['ovr'] == "{}":
+            print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+        else:
+            print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
         #s.sendline ('./churn.py --lab ' +lab+ ' --db-name '+db)
         s.prompt()
         print s.before
