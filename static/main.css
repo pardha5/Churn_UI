@@ -19,7 +19,7 @@ p {
     
 }
 .container_modify .json {
-    margin: 0 auto;
+    margin: auto;
     float: left;
     width: 400px;
     position: relative;

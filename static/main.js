@@ -132,7 +132,7 @@ $(function() {
 
   $("#run-btn").click(function() {
 
-    //$("#run-btn").prop("disabled", true);
+    $("#run-btn").prop("disabled", true);
     var db = $ ("#db_select").val();
     var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
@@ -144,7 +144,6 @@ $(function() {
       console.log(ovr_t)
       //ovr_json = JSON.parse(ovr);
       //console.log(ovr_json);
-      $("#run-btn").prop("disabled", true);
       //Ajax Call with the data obtained
       //convert data to JSON
       var data = {}
@@ -203,12 +202,13 @@ $(function() {
   });
 
 
-   $("#mdfy-btn").click(function() {
-
+  $("#mdfy-btn").click(function() {
     console.log('in mdfy button click')
+    $('#left').animate({
+      'marginLeft' : "100px"
+    });
     $("#mdfy").show();
-
-   
+    $("#mdfy-btn").prop("disabled", true);
   });
 
   function isJSON(str) {
