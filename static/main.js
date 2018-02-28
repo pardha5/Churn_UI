@@ -204,8 +204,9 @@ $(function() {
 
   $("#mdfy-btn").click(function() {
     console.log('in mdfy button click')
+    $(".container_modify").width("800px")
     $('#left').animate({
-      'marginLeft' : "-=300px"
+      'marginLeft' : "-=150px"
     });
     $("#mdfy").show();
     $("#mdfy-btn").prop("disabled", true);
