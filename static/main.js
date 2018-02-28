@@ -156,6 +156,7 @@ $(function() {
       var run_request = $.ajax({
       type: 'POST',
       url: '/lab/run',
+      contentType: 'application/json',
       data: data,
       success: function(data) {
                 console.log('Round call Success')
