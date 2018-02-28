@@ -102,7 +102,7 @@ def run_request():
 def run():
     #db_name= request.args.get('db')
     #lab_name= request.args.get('lab')
-    data = request.data
+    data = request.json
     print data
     return render_template('run.html', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr'])
 
