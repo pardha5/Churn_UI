@@ -96,18 +96,14 @@ def run_request():
     print data['lab']
     #Handle Run Commands here.
     churn_ssh(data)
+    #return redirect(url_for('run', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr']))
     return redirect(url_for('run', data=json.dumps(data)))
-
 @app.route("/run", methods=["POST", "GET"])
 def run():
-    #db_name= request.args.get('db')
-    #lab_name= request.args.get('lab')
-    d = request.args.get('data')
-    data = json.loads(d)
-    print 'data########################'
-    print data
-    print data['db']
-    return render_template('run.html', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr'])
+    db_name= request.args.get('db_name')
+    lab_name= request.args.get('lab_name')
+    ovr_params= request.args.get('ovr_params')
+    return render_template('run.html', db_name=db_name, lab_name=lab_name, ovr_params=ovr_params)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    
