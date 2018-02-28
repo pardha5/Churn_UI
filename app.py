@@ -89,10 +89,15 @@ def run_request():
     print db
     print ovr
     #get labname for the host selected from drop down
-    lab = hosttolab(host)
+    data['lab'] = hosttolab(host)
     print 'lab name in run_req method'
-    print lab
+    print data['lab']
     #Handle Run Commands here.
+    print 'churn command print'
+    if data['ovr'] == "{}":
+        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override '+data['ovr']
+    else:
+        print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
     #churn_ssh(host, db, lab)
     return ''
     #return redirect(url_for('run'))
