@@ -149,7 +149,7 @@ $(function() {
       var data = {}
       data['lab'] = lab;
       data['db'] = db;
-      data['ovr'] = ovr;
+      data['ovr'] = ovr_t;
       console.log('data request obj for ajax call')
       console.log(data)
       /*var run_request = $.ajax({
