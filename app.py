@@ -146,8 +146,10 @@ def churn_ssh(data):
         print 'churn command print'
         if data['ovr'] == "{}":
             print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
         else:
             print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
+            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
         #s.sendline ('./churn.py --lab ' +lab+ ' --db-name '+db)
         s.prompt()
         print s.before
