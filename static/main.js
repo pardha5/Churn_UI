@@ -137,6 +137,7 @@ $(function() {
     var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     var cache;
+    var m_t = $("#m_t").val();
     if($('input[type=checkbox]').prop('checked')){
       cache = 1;
     }
@@ -145,6 +146,7 @@ $(function() {
     }
     console.log(ovr)
     console.log(cache)
+    console.log(m_t)
     if(isJSON(ovr)){
       console.log(ovr)
       ovr_t = ovr.replace(/[\n\r\s]+/g, '').trim();
