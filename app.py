@@ -95,7 +95,7 @@ def run_request():
     print 'lab name in run_req method'
     print data['lab']
     #Handle Run Commands here.
-    churn_ssh(data)
+    #churn_ssh(data)
     #return redirect(url_for('run', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr']))
     return json.dumps(data)
 @app.route("/run", methods=["POST", "GET"])
@@ -146,10 +146,10 @@ def churn_ssh(data):
         print 'churn command print'
         if data['ovr'] == "{}":
             print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
-            #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
+            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
         else:
             print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
-            #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
+            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
         #s.sendline ('./churn.py --lab ' +lab+ ' --db-name '+db)
         s.prompt()
         print s.before

@@ -136,8 +136,15 @@ $(function() {
     var db = $ ("#db_select").val();
     var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
+    var cache;
+    if($('input[type=checkbox]').prop('checked')){
+      cache = 1;
+    }
+    else{
+      cache = 0;
+    }
     console.log(ovr)
-    
+    console.log(cache)
     if(isJSON(ovr)){
       console.log(ovr)
       ovr_t = ovr.replace(/[\n\r\s]+/g, '').trim();
@@ -162,7 +169,7 @@ $(function() {
                 console.log(data)
                 data = JSON.parse(data);
                 console.log(data['lab'])
-                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr'];
+                //window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr'];
             },
       error: function(error){
                 console.log(error);
