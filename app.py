@@ -84,10 +84,13 @@ def run_request():
     ovr = data['ovr']
     #host = request.args.get('lab')
     #db = request.args.get('db')
-    print 'in /lab/run'
+    print 'in /lab/run data object values'
     print host
     print db
     print ovr
+    print data['m_t']
+    print data['cache']
+    print data['log_lvl']
     #get labname for the host selected from drop down
     data['lab'] = hosttolab(host)
     print 'data JSON ########################'

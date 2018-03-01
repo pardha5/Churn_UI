@@ -166,6 +166,9 @@ $(function() {
       data['hlab'] = host_lab;
       data['db'] = db;
       data['ovr'] = ovr_t;
+      data['cache'] = cache;
+      data['m_t'] = m_t;
+      data['log_lvl'] = log_lvl;
       console.log('data request obj for ajax call')
       console.log(data)
       var run_request = $.ajax({
