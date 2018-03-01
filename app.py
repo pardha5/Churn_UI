@@ -147,12 +147,28 @@ def churn_ssh(data):
         s.prompt()
         print s.before
         print 'churn command print'
-        if data['ovr'] == "{}":
-            print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
-            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
+        cmd = './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+        if data['ovr'] == "{}" and data['cache'] == 0 and data['m_t'] == 64 and data['log_lvl'] == "NOTSET":
+            print cmd
+            #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
         else:
-            print './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\''
-            s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
+            if data['ovr'] != "{}":
+                cmd += ' --override \''+data['ovr']+'\''
+                print 'only ovr specified'
+                print cmd
+            if data['cache'] == 1:
+                cmd += ' --caching'
+                print 'caching also included'
+                print cmd
+            if data['m_t'] != 64:
+                cmd += ' --max-threads '+data['m_t']
+                print 'max threads also included'
+                print cmd
+            if data['log_lvl'] != "NOTSET":
+                cmd += ' --log-level '+data['log_lvl']
+                print 'log level included'
+                print cmd
+            #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
         #s.sendline ('./churn.py --lab ' +lab+ ' --db-name '+db)
         s.prompt()
         print s.before
