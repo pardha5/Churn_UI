@@ -73,6 +73,8 @@
             <label for="override">Override:</label>
             <textarea class="form-control" rows="5" id="override">{}</textarea><br>
             <a href="https://wiki.cisco.com/display/SPVSSPE/CHURN+Simulation+Tool#CHURNSimulationTool-CREATE_HOT_BOOKINGS_SCHEDULE" target="_blank">JSON Properties Description</a><br>
+            <label>Max Threads:</label><input type="number" min="64" max="256" step="10"><br>
+            <label><input type="checkbox" value="0">&nbsp;&nbsp;caching</label>
             <label>log-level:</label><br>
             <label><input type="radio" name="logradio" value="NOTSET" checked="checked">&nbsp;&nbsp;NOTSET</label><br>
             <label><input type="radio" name="logradio" value="DEBUG">&nbsp;&nbsp;DEBUG</label><br>
@@ -80,7 +82,6 @@
             <label><input type="radio" name="logradio" value="WARNING">&nbsp;&nbsp;WARNING</label><br>
             <label><input type="radio" name="logradio" value="ERROR">&nbsp;&nbsp;ERROR</label><br>
             <label><input type="radio" name="logradio" value="CRITICAL">&nbsp;&nbsp;CRITICAL</label><br>
-            <label><input type="checkbox" value="0">&nbsp;&nbsp;caching</label>
           </div>
             
           <div class="btm" align="center">
