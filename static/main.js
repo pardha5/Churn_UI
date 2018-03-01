@@ -138,18 +138,22 @@ $(function() {
     var ovr = $("#override").val();
     var cache;
     var m_t = parseInt($("#m_t").val());
+    var log_lvl = $('input[name=logradio]:checked').val(); 
+    //set cache value for the command
     if($('input[type=checkbox]').prop('checked')){
       cache = 1;
     }
     else{
       cache = 0;
     }
+    //validate max_threads to be in the range specified if not in range assign default 64
     if(m_t<64 || m_t>256){
       m_t=64;
     }
     console.log(ovr)
     console.log(cache)
     console.log(m_t)
+    console.log(log_lvl)
     if(isJSON(ovr)){
       console.log(ovr)
       ovr_t = ovr.replace(/[\n\r\s]+/g, '').trim();
