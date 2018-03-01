@@ -144,6 +144,9 @@ $(function() {
     else{
       cache = 0;
     }
+    if(m_t<64 && m_t>256){
+      m_t=64;
+    }
     console.log(ovr)
     console.log(cache)
     console.log(m_t)
