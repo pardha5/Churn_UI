@@ -161,7 +161,7 @@ def churn_ssh(data):
                 print 'caching also included'
                 print cmd
             if data['m_t'] != 64:
-                cmd += ' --max-threads '+data['m_t']
+                cmd += ' --max-threads '+str(data['m_t'])
                 print 'max threads also included'
                 print cmd
             if data['log_lvl'] != "NOTSET":
