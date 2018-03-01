@@ -137,7 +137,7 @@ $(function() {
     var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     var cache;
-    var m_t = $("#m_t").val();
+    var m_t = parseInt($("#m_t").val());
     if($('input[type=checkbox]').prop('checked')){
       cache = 1;
     }
