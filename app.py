@@ -175,7 +175,7 @@ def churn_ssh(data):
                 print 'log level included'
                 print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
-        #s.sendline ('./churn.py --lab ' +lab+ ' --db-name '+db)
+        s.sendline (cmd)
         s.prompt()
         print s.before
         s.logout()
