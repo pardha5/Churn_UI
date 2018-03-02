@@ -187,6 +187,7 @@ $(function() {
                 console.log(p_ovr);
                 ovr_s = JSON.stringify(p_ovr, undefined, 2);
                 console.log(ovr_s);
+                window.localStorage.setItem("data", JSON.stringify(data));
                 window.localStorage.setItem("lab", data['hlab']);
                 window.localStorage.setItem("db", data['db']);
                 window.localStorage.setItem("ovr", ovr_s);

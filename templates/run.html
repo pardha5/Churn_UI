@@ -17,8 +17,9 @@
     window.location.href = '/lab';
     //return false;
     });
-    $("#lab").html(window.localStorage.getItem("lab"));
-    $("#db").html(window.localStorage.getItem("db"));
+    var data = JSON.parse(window.localStorage.getItem("data"));
+    $("#lab").html(window.localStorage.getItem(data['hlab']));
+    $("#db").html(window.localStorage.getItem(data['db']));
     $("#ovr").html(window.localStorage.getItem("ovr"));
     $("#cache").html(window.localStorage.getItem("cache"));
     $("#m_t").html(window.localStorage.getItem("m_t"));
