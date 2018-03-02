@@ -129,7 +129,7 @@ def hosttolab(host):
 def churn_ssh(data):
     
     s = pxssh.pxssh()
-    if not s.login (data['hlab'] , 'ec2-user', ''):
+    if not s.login (data['hlab'] , 'ec2-user', '',login_timeout=120):
         #print "SSH session failed on login."
         logger.info("SSH session failed on login.")
         print str(s)
