@@ -187,8 +187,8 @@ $(function() {
                 console.log(p_ovr);
                 ovr_s = JSON.stringify(p_ovr, undefined, 2);
                 ovr_j = ovr_s.replace(/<\s*\/?\s*br\s*.*?>/g, "<br>");
-                console.log(ovr_s)
-                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + ovr_s+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
+                console.log(ovr_j)
+                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + ovr_j+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
             },
       error: function(error){
                 console.log(error);
