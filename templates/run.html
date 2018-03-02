@@ -17,8 +17,12 @@
     window.location.href = '/lab';
     //return false;
     });
-
+    $("#lab").html(window.localStorage.getItem("lab"));
+    $("#db").html(window.localStorage.getItem("db"));
     $("#ovr").html(window.localStorage.getItem("ovr"));
+    $("#cache").html(window.localStorage.getItem("cache"));
+    $("#m_t").html(window.localStorage.getItem("m_t"));
+    $("#log_lvl").html(window.localStorage.getItem("log_lvl"));
   });
   </script>
   <body>
@@ -42,12 +46,12 @@
           </thead>
           <tbody>
             <tr>
-              <td>{{ lab_name }}</td>
-              <td>{{ db_name }}</td>
+              <td id="lab">{{ lab_name }}</td>
+              <td id="db">{{ db_name }}</td>
               <td><pre id="ovr"></pre></td>
-              <td>{{ cache }}</td>
-              <td>{{ m_t }}</td>
-              <td>{{ log_lvl }}</td>
+              <td id="cache">{{ cache }}</td>
+              <td id="m_t">{{ m_t }}</td>
+              <td id="log_lvl">{{ log_lvl }}</td>
             </tr>
           </tbody>
         </table>
