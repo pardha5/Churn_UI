@@ -9,7 +9,7 @@
   
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
-  <!--<script src="{{ url_for('static', filename='main.js') }}"></script>-->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
   <!--<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>-->
   <script>
   $(function(){
@@ -42,7 +42,7 @@
             <tr>
               <td>{{ lab_name }}</td>
               <td>{{ db_name }}</td>
-              <td><pre>{{ ovr_params }}</pre></td>
+              <td><pre id="ovr"></pre></td>
               <td>{{ cache }}</td>
               <td>{{ m_t }}</td>
               <td>{{ log_lvl }}</td>
