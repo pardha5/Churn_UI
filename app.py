@@ -105,7 +105,7 @@ def run_request():
 def run():
     db = request.args.get('db')
     lab = request.args.get('lab')
-    ovr = request.args.get('ovr')
+    ovr = json.loads(request.args.get('ovr'))
     cache = request.args.get('cache')
     m_t = request.args.get('m_t')
     log_lvl = request.args.get('log_lvl')
