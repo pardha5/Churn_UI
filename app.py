@@ -106,7 +106,10 @@ def run():
     db = request.args.get('db')
     lab = request.args.get('lab')
     ovr = request.args.get('ovr')
-    return render_template('run.html', db_name=db, lab_name=lab, ovr_params=ovr)
+    cache = request.args.get('cache')
+    m_t = request.args.get('m_t')
+    log_lvl = request.args.get('log_lvl')
+    return render_template('run.html', db_name=db, lab_name=lab, ovr_params=ovr, cache=cache, m_t=m_t, log_lvl=log_lvl)
 
 def parse_json(json_file):
     with open(json_file) as data_file:    

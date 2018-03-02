@@ -44,6 +44,12 @@ p {
   bottom: 0px;*/
 }
 
+.container_run {
+
+  width: 1000px;
+  padding: 10px;
+}
+
 /*#modify {
 	display: none;
   visibility: hidden;

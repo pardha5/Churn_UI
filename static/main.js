@@ -181,7 +181,7 @@ $(function() {
                 console.log(data)
                 data = JSON.parse(data);
                 console.log(data['lab'])
-                //window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr'];
+                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr']+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
             },
       error: function(error){
                 console.log(error);
