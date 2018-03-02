@@ -18,8 +18,9 @@
     </div>
     <br><br>
     <div align="center" class="container_run">
-      <h2>{{ db_name }} Run Initiated on {{ lab_name }}</h2><br><br>
-      <h2 align="center">Run Initiated</h2>
+      <h2 id="db_name"></h2><h2>Run Initiated on </h2><h2 id="lab_name"><h2></h2><br><br>
+      <h2>Command: </h2><h3 id="cmd"></h3>
+      <h2 align="center">Run Details</h2>
         <table class="table">
           <thead>
             <tr>
@@ -33,12 +34,12 @@
           </thead>
           <tbody>
             <tr>
-              <td id="lab">{{ lab_name }}</td>
-              <td id="db">{{ db_name }}</td>
+              <td id="lab"></td>
+              <td id="db"></td>
               <td><pre id="ovr"></pre></td>
-              <td id="cache">{{ cache }}</td>
-              <td id="m_t">{{ m_t }}</td>
-              <td id="log_lvl">{{ log_lvl }}</td>
+              <td id="cache"></td>
+              <td id="m_t"></td>
+              <td id="log_lvl"></td>
             </tr>
           </tbody>
         </table>

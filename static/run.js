@@ -4,8 +4,9 @@ $(function(){
     //return false;
     });
     //get values from window and place in html
-    $("#lab").html(window.localStorage.getItem("lab"));
-    $("#db").html(window.localStorage.getItem("db"));
+    $("#cmd").html(window.localStorage.getItem("cmd"));
+    $("#lab,#lab_name").html(window.localStorage.getItem("lab"));
+    $("#db,#db_name").html(window.localStorage.getItem("db"));
     $("#ovr").html(window.localStorage.getItem("ovr"));
     $("#cache").html(window.localStorage.getItem("cache"));
     $("#m_t").html(window.localStorage.getItem("m_t"));
