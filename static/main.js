@@ -181,7 +181,13 @@ $(function() {
                 console.log(data)
                 data = JSON.parse(data);
                 console.log(data['lab'])
-                window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr']+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
+                console.log('#####parse ovr to support pre tag')
+                console.log(data['ovr'])
+                p_ovr= JSON.parse(data['ovr']);
+                console.log(p_ovr);
+                ovr_s = JSON.stringify(p_ovr, undefined, 2);
+                console.log(ovr_s)
+                //window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + data['ovr']+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
             },
       error: function(error){
                 console.log(error);
