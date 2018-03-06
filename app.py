@@ -186,7 +186,9 @@ def churn_ssh(data):
         s.sendline('./report.py -d '+data['db']+' -c churn_0')
         s.prompt()
         output = s.before
+        print '#########output#############'
         print output
+        print '#########output#############'
         #s.expect(".*\$ ")
         #output = s.before
         #print output 
