@@ -12,4 +12,5 @@ $(function(){
     $("#m_t").html(window.localStorage.getItem("m_t"));
     $("#log_lvl").html(window.localStorage.getItem("log_lvl"));
     $("#db_data").html(window.localStorage.getItem("db_data"));
+    $("#report").html(window.localStorage.getItem("report"));
 });

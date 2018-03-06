@@ -195,6 +195,7 @@ $(function() {
                 window.localStorage.setItem("cache", data['cache']);
                 window.localStorage.setItem("m_t", data['m_t']);
                 window.localStorage.setItem("log_lvl", data['log_lvl']);
+                window.localStorage.setItem("report", data['report']);
                 //window.location.href = '/run?lab=' + data['hlab'] + '&db=' + data['db']+ '&ovr=' + ovr_s+ '&cache=' + data['cache']+ '&m_t=' + data['m_t']+ '&log_lvl=' + data['log_lvl'];
                 window.location.href = '/run';
             },
