@@ -102,8 +102,10 @@ def run_request():
     print 'lab name in run_req method'
     print data['lab']
     #Handle Run Commands here.
-    cmd = churn_ssh(data)
+    cmd, report = churn_ssh(data)
     data['cmd'] = cmd
+    data['report'] = report
+    print data['report']
     #return redirect(url_for('run', db_name=data['db'], lab_name=data['lab'], ovr_params=data['ovr']))
     return json.dumps(data)
 @app.route("/run", methods=["POST", "GET"])
@@ -185,9 +187,9 @@ def churn_ssh(data):
         print s.before
         s.sendline('./report.py -d '+data['db']+' -c churn_0')
         s.prompt()
-        output = s.before
+        report = s.before
         print '#########output#############'
-        print output
+        print report
         print '#########output#############'
         #s.expect(".*\$ ")
         #output = s.before
@@ -195,7 +197,7 @@ def churn_ssh(data):
         print './report.py -d '+data['db']+' -c churn_0'
         print ("i value:%d" %i)
         s.logout()
-    return cmd
+    return cmd, report
 
 
 
