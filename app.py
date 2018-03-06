@@ -53,8 +53,11 @@ def db_request():
     print 'in /lab/db'
     client = MongoClient('localhost',lab_id)
     print client
-    
     dbase = client[db]
+    #get current churn runs... churn_id (example churn_0..)
+    global i
+    i = sum('churn' in s for s in dbase.collection_names())
+    print ("i value:%d" %i)
     print dbase
     if 'JSON' in dbase.collection_names():
         collection = dbase.JSON
@@ -178,6 +181,7 @@ def churn_ssh(data):
         #s.sendline (cmd)
         s.prompt()
         print s.before
+        print ("i value:%d" %i)
         s.logout()
     return cmd
 
