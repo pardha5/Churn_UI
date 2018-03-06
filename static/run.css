@@ -20,14 +20,14 @@ body {
     float: left;
     width: 350px;
     /*position: relative;*/
-    height: 600px;
+    height: 550px;
 }
 .container_modify .right {
     
     margin: 0 auto;
     float: right;
     width: 500px;
-    height: 600px;
+    height: 550px;
 }
 .container_modify .btm {
 
