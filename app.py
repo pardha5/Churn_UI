@@ -183,7 +183,7 @@ def churn_ssh(data):
         #s.sendline('./report.py -d '+data['db']+' -c churn_0')
         s.prompt()
         print s.before
-        output = s.sendline('./report.py -d '+data['db']+' -c churn_0 > pardha.txt').read()
+        output = s.sendline('./report.py -d '+data['db']+' -c churn_0').read()
         #s.expect(".*\$ ")
         #output = s.before
         print output 
