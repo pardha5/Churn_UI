@@ -8,3 +8,31 @@ body {
   max-width: 950px;
   padding: 10px;
 }
+.container_modify {
+    margin: auto;
+    width: 950px;
+    /*height: 400px;*/
+    padding: 10px;
+    
+}
+.container_modify .left {
+    margin: auto;
+    float: left;
+    width: 350px;
+    /*position: relative;*/
+    /*height: 390px;*/
+}
+.container_modify .right {
+    
+    margin: 0 auto;
+    float: right;
+    width: 500px;
+    display: none;
+    /*height: 390px;*/
+}
+.container_modify .btm {
+
+  clear: both;
+  /*position: relative;
+  bottom: 0px;*/
+}
