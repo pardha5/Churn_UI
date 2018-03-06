@@ -179,6 +179,7 @@ def churn_ssh(data):
                 print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
         #s.sendline (cmd)
+        s.sendline('./report.py -d '+data['db']+' -c churn_0')
         s.prompt()
         print s.before
         print ("i value:%d" %i)
