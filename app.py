@@ -183,9 +183,9 @@ def churn_ssh(data):
         #s.sendline('./report.py -d '+data['db']+' -c churn_0')
         s.prompt()
         print s.before
-        child = pexpect.spawn('./report.py -d '+data['db']+' -c churn_0')
-        child.expect(pexpect.EOF)
-        output = child.before
+        s.sendline('./report.py -d '+data['db']+' -c churn_0')
+        s.expect(pexpect.EOF)
+        output = s.before
         print output 
         print './report.py -d '+data['db']+' -c churn_0'
         print ("i value:%d" %i)
