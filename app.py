@@ -184,7 +184,7 @@ def churn_ssh(data):
         s.prompt()
         print s.before
         s.sendline('./report.py -d '+data['db']+' -c churn_0')
-        s.expect(pexpect.EOF)
+        s.expect(".*\$ ")
         output = s.before
         print output 
         print './report.py -d '+data['db']+' -c churn_0'
