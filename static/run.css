@@ -11,7 +11,7 @@ body {
 .container_modify {
     margin: auto;
     width: 950px;
-    /*height: 400px;*/
+    height: 600px;
     padding: 10px;
     
 }
@@ -27,7 +27,6 @@ body {
     margin: 0 auto;
     float: right;
     width: 500px;
-    display: none;
     /*height: 390px;*/
 }
 .container_modify .btm {
