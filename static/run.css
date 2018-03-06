@@ -11,7 +11,7 @@ body {
 .container_modify {
     margin: auto;
     width: 950px;
-    height: 600px;
+    /*height: 600px;*/
     padding: 10px;
     
 }
@@ -20,14 +20,14 @@ body {
     float: left;
     width: 350px;
     /*position: relative;*/
-    /*height: 390px;*/
+    height: 600px;
 }
 .container_modify .right {
     
     margin: 0 auto;
     float: right;
     width: 500px;
-    /*height: 390px;*/
+    height: 600px;
 }
 .container_modify .btm {
 
