@@ -181,20 +181,16 @@ def churn_ssh(data):
                 print 'log level included'
                 print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
-        #s.sendline (cmd)
-        #s.sendline('./report.py -d '+data['db']+' -c churn_0')
+        s.sendline (cmd)
         s.prompt()
         print s.before
-        s.sendline('./report.py -d '+data['db']+' -c churn_0')
+        s.sendline('./report.py -d '+data['db']+' -c churn_'+i)
         s.prompt()
         report = s.before
         print '#########output#############'
         print report
-        print '#########output#############'
-        #s.expect(".*\$ ")
-        #output = s.before
-        #print output 
-        print './report.py -d '+data['db']+' -c churn_0'
+        print '#########output#############' 
+        print './report.py -d '+data['db']+' -c churn_'+i
         print ("i value:%d" %i)
         s.logout()
     return cmd, report
