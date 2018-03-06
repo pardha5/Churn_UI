@@ -68,6 +68,7 @@ $(function() {
         $(child).html(JSON.stringify(data, null, 4));
       });*/
       console.log(db_data);
+      window.localStorage.setItem("db_data", db_data);
       
       $(".box").append(db_data);
 
