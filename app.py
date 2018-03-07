@@ -193,7 +193,8 @@ def churn_ssh(data):
         s.sendline('pwd')
         s.prompt()
         print s.before
-        s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
+        #s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
+        s.sendline('./report.py -d '+data['db']+' -c churn_0'
         s.prompt()
         report = s.before
         print '#########output#############'
