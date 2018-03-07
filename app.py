@@ -1,5 +1,6 @@
 import json
 import logging
+import time
 import pexpect
 from pexpect import pxssh
 from pymongo import MongoClient
@@ -181,9 +182,17 @@ def churn_ssh(data):
                 print 'log level included'
                 print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
-        s.sendline (cmd)
+        s.sendline ('screen')
+        s.sendline ('ps -ef|grep churn')
         s.prompt()
         print s.before
+        s.sendline (cmd)
+        time.sleep(15)
+        s.sendline ('ps -ef|grep churn')
+        s.prompt()
+        print s.before
+        #s.prompt()
+        #print s.before
         s.logout()
         #again login
     s.login (data['hlab'] , 'ec2-user', '',login_timeout=120)
