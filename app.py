@@ -181,7 +181,7 @@ def churn_ssh(data):
         #s.sendline ('ps -ef|grep churn')
         #s.prompt()
         #print s.before
-        s.sendline (cmd)
+        #s.sendline (cmd)
         s.prompt()
         print s.before
         #s.sendline ('\n')
