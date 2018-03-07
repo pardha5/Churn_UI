@@ -186,16 +186,16 @@ def churn_ssh(data):
         print s.before
         s.logout()
         #again login
-        s.login (data['hlab'] , 'ec2-user', '',login_timeout=120)
-        s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
-        s.prompt()
-        report = s.before
-        print '#########output#############'
-        print report
-        print '#########output#############' 
-        print './report.py -d '+data['db']+' -c churn_'+ str(i)
-        print ("i value:%d" %i)
-        s.logout()
+    s.login (data['hlab'] , 'ec2-user', '',login_timeout=120)
+    s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
+    s.prompt()
+    report = s.before
+    print '#########output#############'
+    print report
+    print '#########output#############' 
+    print './report.py -d '+data['db']+' -c churn_'+ str(i)
+    print ("i value:%d" %i)
+    s.logout()
     return cmd, report
 
 
