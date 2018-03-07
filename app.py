@@ -184,7 +184,7 @@ def churn_ssh(data):
         s.sendline (cmd+ ' &')
         s.prompt()
         print s.before
-        s.sendline ('echo -ne \'\n')
+        s.sendline ('\n')
         s.prompt()
         print s.before
         s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
