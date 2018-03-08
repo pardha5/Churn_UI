@@ -193,14 +193,15 @@ def churn_ssh(data):
         s.sendline('sleep 5')
         #s.prompt()
         #print s.before
-        #s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
-        s.sendline('./report.py -d hot_1k_json -c churn_0')
+        s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt')
+        #s.sendline('./report.py -d hot_1k_json -c churn_0')
         s.prompt()
-        report = s.before
+        #report = s.before
         print '#########output#############'
-        print report
+        #print report
         print '#########output#############' 
-        print './report.py -d '+data['db']+' -c churn_'+ str(i)
+        print './report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt'
+        #print './report.py -d '+data['db']+' -c churn_'+ str(i)
         print ("i value:%d" %i)
         s.logout()
     return cmd, report
