@@ -200,7 +200,9 @@ def churn_ssh(data):
         #s.sendline('./report.py -d hot_1k_json -c churn_0')
         s.sendline('cat '+data['db']+'.txt')
         #s.sendline('echo \"$(<'+data['db']+'.txt)\"')
-        s.expect("\$")
+        s.prompt()
+        #s.expect("\$")
+        print s.before
         report = s.before
         print '#########output#############'
         print report
