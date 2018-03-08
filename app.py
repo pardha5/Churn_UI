@@ -182,8 +182,8 @@ def churn_ssh(data):
         #s.prompt()
         #print s.before
         s.sendline (cmd)
-        s.prompt()
-        print s.before
+        #s.prompt()
+        #print s.before
         #s.sendline ('\n')
         #s.prompt()
         #print s.before
@@ -202,9 +202,9 @@ def churn_ssh(data):
         print '#########output#############'
         print report
         print '#########output#############' 
-        print './report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt'
+        #print './report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt'
         #print './report.py -d '+data['db']+' -c churn_'+ str(i)
-        print ("i value:%d" %i)
+        #print ("i value:%d" %i)
         s.logout()
     return cmd, report
 
