@@ -194,14 +194,16 @@ def churn_ssh(data):
         #s.prompt()
         #print s.before
         s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt')
+        s.sendline('scp '+data['db']+'.txt root@54.194.172.220:/root/runs/')
         #s.sendline('./report.py -d hot_1k_json -c churn_0')
         #s.sendline('cat '+data['db']+'.txt')
-        s.sendline('echo \"$(<'+data['db']+'.txt)\"')
+        #s.sendline('echo \"$(<'+data['db']+'.txt)\"')
         s.prompt()
-        report = s.before
-        print '#########output#############'
-        print report
-        print '#########output#############' 
+        report= "Report Available on spark channel"
+        #report = s.before
+        #print '#########output#############'
+        #print report
+        #print '#########output#############' 
         #print './report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt'
         #print './report.py -d '+data['db']+' -c churn_'+ str(i)
         #print ("i value:%d" %i)
