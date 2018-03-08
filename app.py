@@ -195,9 +195,9 @@ def churn_ssh(data):
         #s.sendline('sleep 5')
         #s.prompt()
         #print s.before
-        s.sendline('ls -l')
-        s.prompt()
-        print s.before
+        #s.sendline('ls -l')
+        #s.prompt()
+        #print s.before
         #s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt')
         #s.prompt()
         #print s.before
