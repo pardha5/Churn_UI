@@ -182,8 +182,8 @@ def churn_ssh(data):
         #s.prompt()
         #print s.before
         s.sendline (cmd)
-        #s.prompt()
-        #print s.before
+        s.prompt()
+        print s.before
         #s.sendline ('\n')
         #s.prompt()
         #print s.before
@@ -194,6 +194,8 @@ def churn_ssh(data):
         #s.prompt()
         #print s.before
         s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt')
+        s.prompt()
+        print s.before
         #s.sendline('scp '+data['db']+'.txt root@54.194.172.220:/root/runs/')
         #s.sendline('./report.py -d hot_1k_json -c churn_0')
         s.sendline('cat '+data['db']+'.txt')
