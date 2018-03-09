@@ -158,7 +158,7 @@ def churn_ssh(data):
         s.prompt()
         print s.before
         print 'churn command print'
-        cmd = 'nohup ./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+        cmd = 'screen -d -m ./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
         if data['ovr'] == "{}" and data['cache'] == 0 and data['m_t'] == 64 and data['log_lvl'] == "NOTSET":
             print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
