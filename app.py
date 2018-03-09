@@ -186,7 +186,7 @@ def churn_ssh(data):
         #import pdb 
         #pdb.set_trace()
         s.sendline(cmd)
-        s.prompt()
+        #s.prompt()
         ##print s.before
         #s.sendline ('\n')
         #s.prompt()
