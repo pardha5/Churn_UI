@@ -158,7 +158,7 @@ def churn_ssh(data):
         s.prompt()
         print s.before
         print 'churn command print'
-        cmd = './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+        cmd = 'nohup ./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
         if data['ovr'] == "{}" and data['cache'] == 0 and data['m_t'] == 64 and data['log_lvl'] == "NOTSET":
             print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
@@ -186,8 +186,8 @@ def churn_ssh(data):
         #import pdb 
         #pdb.set_trace()
         s.sendline(cmd)
-        #s.prompt()
-        ##print s.before
+        s.prompt()
+        print s.before
         #s.sendline ('\n')
         #s.prompt()
         #print s.before
@@ -200,7 +200,7 @@ def churn_ssh(data):
         #s.sendline('ls -l')
         #s.prompt()
         #print s.before
-        ##s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
+        s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
         #s.prompt()
         #print s.before
         #s.sendline('scp '+data['db']+'.txt root@54.194.172.220:/root/runs/')
@@ -210,14 +210,14 @@ def churn_ssh(data):
         #s.sendline('cat '+data['db']+'.txt')
         #s.sendline('echo "$(<sample.txt)"')
         #s.sendline('echo \"$(<'+data['db']+'.txt)\"')
-        ##s.prompt()
+        s.prompt()
         #s.expect("\$")
-        ##print s.before
-        ##report = s.before
-        report = 'Available on '+data['lab']+' spark channel'
-        ##print '#########output#############'
-        ##print report
-        ##print '#########output#############' 
+        print s.before
+        report = s.before
+        #report = 'Available on '+data['lab']+' spark channel'
+        print '#########output#############'
+        print report
+        print '#########output#############' 
         #print './report.py -d '+data['db']+' -c churn_'+ str(i)+' > '+data['db']+'.txt'
         #print './report.py -d '+data['db']+' -c churn_'+ str(i)
         #print ("i value:%d" %i)
