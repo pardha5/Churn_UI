@@ -28,7 +28,7 @@ $(function() {
       console.log(data.length)
       // add values to list 
       var option_list = JSON.parse(data);
-      option_list = ["Select a DB"].concat(option_list);
+      option_list = ["Select a Profile"].concat(option_list);
       console.log('after concat data')
       console.log(option_list.length)
       console.log(option_list[2])
