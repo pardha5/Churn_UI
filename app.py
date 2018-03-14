@@ -158,38 +158,38 @@ def churn_ssh(data):
         s.prompt()
         print s.before
         print 'churn command print'
-        cmd = 'screen -d -m ./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
-        if data['ovr'] == "{}" and data['cache'] == 0 and data['m_t'] == 64 and data['log_lvl'] == "NOTSET":
-            print cmd
+        cmd = './churn.py --lab ' +data['lab']+ ' --db-name '+data['db']
+        #if data['ovr'] == "{}" and data['cache'] == 0 and data['m_t'] == 64 and data['log_lvl'] == "NOTSET":
+            #print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db'])
-        else:
-            if data['ovr'] != "{}":
-                cmd += ' --override \''+data['ovr']+'\''
-                print 'only ovr specified'
-                print cmd
-            if data['cache'] == 1:
-                cmd += ' --caching'
-                print 'caching also included'
-                print cmd
-            if data['simulate'] == 1:
-                cmd += ' --simulate'
-                print 'simulate also included'
-                print cmd
-            if data['m_t'] != 64:
-                cmd += ' --max-threads '+str(data['m_t'])
-                print 'max threads also included'
-                print cmd
-            if data['log_lvl'] != "NOTSET":
-                cmd += ' --log-level '+data['log_lvl']
-                print 'log level included'
-                print cmd
+        #else:
+        if data['ovr'] != "{}":
+            cmd += ' --override \''+data['ovr']+'\''
+            print 'only ovr specified'
+            print cmd
+        if data['cache'] == 1:
+            cmd += ' --caching'
+            print 'caching also included'
+            print cmd
+        if data['simulate'] == 1:
+            cmd += ' --simulate'
+            print 'simulate also included'
+            print cmd
+        if data['m_t'] != 64:
+            cmd += ' --max-threads '+str(data['m_t'])
+            print 'max threads also included'
+            print cmd
+        if data['log_lvl'] != "NOTSET":
+            cmd += ' --log-level '+data['log_lvl']
+            print 'log level included'
+            print cmd
             #s.sendline ('./churn.py --lab ' +data['lab']+ ' --db-name '+data['db']+ ' --override \''+data['ovr']+'\'')
         #s.sendline ('ps -ef|grep churn')
         #s.prompt()
         #print s.before
         #import pdb 
         #pdb.set_trace()
-        s.sendline(cmd)
+        s.sendline('screen -d -m '+cmd)
         s.prompt()
         print s.before
         #s.sendline ('\n')
