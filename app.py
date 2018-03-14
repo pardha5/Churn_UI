@@ -171,6 +171,10 @@ def churn_ssh(data):
                 cmd += ' --caching'
                 print 'caching also included'
                 print cmd
+            if data['simulate'] == 1:
+                cmd += ' --simulate'
+                print 'simulate also included'
+                print cmd
             if data['m_t'] != 64:
                 cmd += ' --max-threads '+str(data['m_t'])
                 print 'max threads also included'

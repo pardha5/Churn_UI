@@ -138,15 +138,24 @@ $(function() {
     var host_lab = $("#lab_select").find(":selected").text();
     var ovr = $("#override").val();
     var cache;
+    var simulate;
     var m_t = parseInt($("#m_t").val());
     var log_lvl = $('input[name=logradio]:checked').val(); 
     //set cache value for the command
-    if($('input[type=checkbox]').prop('checked')){
+    if($('input[name=cache]').prop('checked')){
       cache = 1;
     }
     else{
       cache = 0;
     }
+    //set simulate value for the command
+    if($('input[name=simulate]').prop('checked')){
+      simulate = 1;
+    }
+    else{
+      simulate = 0;
+    }
+
     //validate max_threads to be in the range specified if not in range assign default 64
     if(m_t<64 || m_t>256){
       m_t=64;
@@ -168,6 +177,7 @@ $(function() {
       data['db'] = db;
       data['ovr'] = ovr_t;
       data['cache'] = cache;
+      data['simulate']= simulate;
       data['m_t'] = m_t;
       data['log_lvl'] = log_lvl;
       console.log('data request obj for ajax call')
@@ -193,6 +203,7 @@ $(function() {
                 window.localStorage.setItem("db", data['db']);
                 window.localStorage.setItem("ovr", ovr_s);
                 window.localStorage.setItem("cache", data['cache']);
+                window.localStorage.setItem("simulate", data['simulate']);
                 window.localStorage.setItem("m_t", data['m_t']);
                 window.localStorage.setItem("log_lvl", data['log_lvl']);
                 window.localStorage.setItem("report", data['report']);
