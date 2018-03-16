@@ -193,7 +193,7 @@ def churn_ssh(data):
         #print s.before
         #import pdb 
         #pdb.set_trace()
-        #s.sendline('screen -d -m '+cmd)
+        s.sendline('screen -d -m '+cmd)
         s.prompt()
         print s.before
         #s.sendline ('\n')
@@ -208,7 +208,7 @@ def churn_ssh(data):
         #s.sendline('ls -l')
         #s.prompt()
         #print s.before
-        #s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
+        s.sendline('./report.py -d '+data['db']+' -c churn_'+ str(i))
         #s.prompt()
         #print s.before
         #s.sendline('scp '+data['db']+'.txt root@54.194.172.220:/root/runs/')
