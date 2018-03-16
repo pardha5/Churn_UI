@@ -139,6 +139,7 @@ $(function() {
     var ovr = $("#override").val();
     var cache;
     var simulate;
+    var spark;
     var m_t = parseInt($("#m_t").val());
     var log_lvl = $('input[name=logradio]:checked').val(); 
     //set cache value for the command
@@ -154,6 +155,15 @@ $(function() {
     }
     else{
       simulate = 0;
+    }
+
+    //set spark report posts
+
+    if($('input[name=spark]').prop('checked')){
+      spark = 1;
+    }
+    else{
+      spark = 0;
     }
 
     //validate max_threads to be in the range specified if not in range assign default 64
@@ -176,6 +186,7 @@ $(function() {
       data['hlab'] = host_lab;
       data['db'] = db;
       data['ovr'] = ovr_t;
+      data['spark'] = spark;
       data['cache'] = cache;
       data['simulate']= simulate;
       data['m_t'] = m_t;
@@ -202,6 +213,7 @@ $(function() {
                 window.localStorage.setItem("lab", data['hlab']);
                 window.localStorage.setItem("db", data['db']);
                 window.localStorage.setItem("ovr", ovr_s);
+                window.localStorage.setItem("spark", data['spark']);
                 window.localStorage.setItem("cache", data['cache']);
                 window.localStorage.setItem("simulate", data['simulate']);
                 window.localStorage.setItem("m_t", data['m_t']);

@@ -167,6 +167,10 @@ def churn_ssh(data):
             cmd += ' --override \''+data['ovr']+'\''
             print 'only ovr specified'
             print cmd
+        if data['spark'] == 1:
+            cmd += ' --spark'
+            print 'spark post also included'
+            print cmd
         if data['cache'] == 1:
             cmd += ' --caching'
             print 'caching also included'
@@ -189,7 +193,7 @@ def churn_ssh(data):
         #print s.before
         #import pdb 
         #pdb.set_trace()
-        s.sendline('screen -d -m '+cmd)
+        #s.sendline('screen -d -m '+cmd)
         s.prompt()
         print s.before
         #s.sendline ('\n')

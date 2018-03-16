@@ -8,6 +8,7 @@ $(function(){
     $("#lab,#lab_name").html(window.localStorage.getItem("lab"));
     $("#db,#db_name").html(window.localStorage.getItem("db"));
     $("#ovr").html(window.localStorage.getItem("ovr"));
+    $("#spark").html(window.localStorage.getItem("spark"));
     $("#cache").html(window.localStorage.getItem("cache"));
     $("#simulate").html(window.localStorage.getItem("simulate"));
     $("#m_t").html(window.localStorage.getItem("m_t"));
